@@ -134,9 +134,7 @@ void Interface::inputRequest(){
     int id;
     cout << "> ";
     cin >> input;
-    for (auto& i : input){
-      input = toupper(input[i]);
-    }
+
     //Book related commands but no Books results in Printing message and continuing...
     if ((input == "BOOK" || input == "BROWSE" || input == "REMOVEB" || input == "RETURN") && (simLibrary.isBooksEmpty())){
       cout << "No books in your library.\n\n";
@@ -322,7 +320,7 @@ void Interface::determineSortBy(string input){
   else if (input == "BOOKID"){
     simLibrary.sortByBookID();
   }
-  else{
+  else {
       simLibrary.sortDataBy(input);
     }
   }
@@ -337,14 +335,14 @@ void Interface::PrintHelp() const{
           "CHECKOUT: Checks a book out to a user account.\n"
           "RENEW: Renews a checked out book. (Up to two times allowed)\n"
           "RETURN: Returns a checked out book.\n"
-          "RECOMMEND: Generates a list of recommended books for a given user.\n"
+          //"RECOMMEND: Generates a list of recommended books for a given user.\n"
           "ADDB: Adds a new book to the library.\n"
           "REMOVEB: Removes a specific book from the library.\n"
           "ADDA: Creates a new user account in the library.\n"
           "REMOVEA: Removes a specific user account from the library.\n"
           "SYSTEM: Provides diagnostic information about the system.\n"
           "TIME: Fast forwards the system time by a specified number of days.\n"
-          "EXPORT: Exports the library’s books and accounts to files.\n"
+          //"EXPORT: Exports the library’s books and accounts to files.\n"
           "HELP: Displays this help menu.\n"
           "EXIT: Exits the program.\n";
 }
