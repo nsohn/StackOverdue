@@ -21,7 +21,7 @@ BOOKID|DUE_DATE|NUMBER_OF_TIMES_RENEWED
 6|3|2
 
 # **The main classes are as follows:**
-## **Book:** maintains information about itself, title, author, genre, populartiy score, availability. Also maintains information about the User if someone borrows the book. Although the Book should not technically know about Users, given this programs purpose, I found that it was appropriate for the Book to keep track of the Users ID, the Books duedate and it's renewal count. Book also has the ability to Print different pieces of information about itself in different syntax in order to make information simpler for the simulator to read.
+## __Book__: maintains information about itself, title, author, genre, populartiy score, availability. Also maintains information about the User if someone borrows the book. Although the Book should not technically know about Users, given this programs purpose, I found that it was appropriate for the Book to keep track of the Users ID, the Books duedate and it's renewal count. Book also has the ability to Print different pieces of information about itself in different syntax in order to make information simpler for the simulator to read.
 
 ## **User:** keeps track of the books that it has checked out. I used a vector<Book*> to keep track of the User's Books. Perhaps it would have been a better design to use an unordered_set, however, I felt that since there is a maximum of 10 Books per User, a vector provides essentially the same speed.  It also has it's ID number, name, and a history of all the Books it has borrowed. The history of Books is stored an unordered_set of integers, where the ints are the BookID, which are guaranteed to be unique and even if the Book is deleted, it's ID will never be used again. 
 
